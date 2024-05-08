@@ -38,7 +38,7 @@ global with sharing class  ETT_InventoryUpsertAPI {
           Map<String,ETT_Pattern_Master__c> mapofPattern= new Map<String,ETT_Pattern_Master__c>();
       
       // Map<String,ETT_Tyre_Inventory__c> mapofTyreInventory = new Map<String,ETT_Tyre_Inventory__c>([Select id,Serial_Number__c from ETT_Tyre_Inventory__c where ETT_Tyre_Serial_Number__c in:TyreSerialSet]);
-      for(ETT_Tyre_Inventory__c etInv:[Select id,Serial_Number__c,ETT_Tyre_Serial_Number__c,ETT_Country__c,ETT_Brand__c,ETT_Pattern__c from ETT_Tyre_Inventory__c where ETT_Tyre_Serial_Number__c in:TyreSerialSet]){
+      for(ETT_Tyre_Inventory__c etInv:[Select id,Serial_Number__c,ETT_Tyre_Serial_Number__c,ETT_Country__c,ETT_Brand__c,ETT_Pattern__c from ETT_Tyre_Inventory__c where Serial_Number__c in:TyreSerialSet]){
       mapofTyreInventory.put(etInv.ETT_Tyre_Serial_Number__c ,etInv);
   
       

@@ -45,6 +45,7 @@ global with sharing class  ETT_InventoryUpsertAPI {
       }
       
        for(ETT_Country_Master__c etInv:[Select id,Name,ETT_Last_Update_Date__c from ETT_Country_Master__c where Name in:Countryset]){
+        
       mapofCountry.put(etInv.Name,etInv);
   
       

@@ -1,10 +1,9 @@
 <aura:component controller="ETT_AddTyreDetailCtrl" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
  <!--
 Author:Janardhan
-
  -->
     
-    
+    <!--P1-->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
     
